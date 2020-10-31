@@ -78,7 +78,6 @@
                     scoreText.setText('Score: ' + score);
                     critter.disableBody(true, true);
                     // Respawn critters if there are no more on the screen.
-                    // Also create an another poop
                     if (critters.countActive(true) === 0) {
                         critters.children.iterate(function (child) {
 
@@ -88,6 +87,7 @@
                         });
                         createCritter();
                         var i;
+                        // Create poopCount more poops when you clear all the critters
                         for (i = 0; i < poopCount; i++) {
                             createPoop();
                         }
